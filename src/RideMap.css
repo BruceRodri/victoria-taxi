@@ -1,0 +1,45 @@
+.itinerary-map.ride-map {
+  min-width:0; align-self:start; overflow:hidden; padding:0;
+  background:#fff; border:1px solid #d9d9d3; border-radius:20px;
+  box-shadow:0 14px 45px -35px #142337;
+}
+.map-heading, .map-heading h2, .map-heading button, .map-editor div,
+.waypoint-key, .waypoint-key span, .journey-readout dt, .journey-readout p {
+  display:flex; align-items:center;
+}
+.map-heading { padding:15px 18px; gap:10px; justify-content:space-between; }
+.map-heading h2 { margin:0; gap:9px; font-size:18px; }
+.map-heading h2 svg {color:#95743a}
+.map-heading button,.map-editor button {
+  background:#fff; color:#273448; border:1px solid #d4d6d6;
+  border-radius:9px; padding:8px 10px; font-weight:600; font-size:12px; gap:6px;
+}
+.map-editor {display:grid; gap:8px; justify-items:start; background:#f8f7f4; padding:12px 18px; border-top:1px solid #e4e2db;}
+.map-editor div {gap:4px}.map-editor button[aria-pressed=true] {background:#182b43;color:white}
+.map-editor small {color:#526071}
+.map-stage { position:relative; isolation:isolate; }
+.street-map { height:clamp(310px,45vh,520px); width:100%; background:#e2e7e5; z-index:0; }
+.street-map .leaflet-tile-pane { filter:saturate(.45) contrast(.94) brightness(1.02); }
+.is-editing .street-map {cursor:crosshair}
+.map-fit {position:absolute; z-index:1; right:12px;top:12px; display:grid;place-items:center;width:42px;height:42px;border:1px solid #ced3d7;background:#fff;color:#24334a;border-radius:11px;box-shadow:0 2px 8px #15213722}
+.waypoint {border-radius:50%;border:3px solid white;display:grid;place-items:center;box-shadow:0 2px 8px #17213370;font: bold 13px/1 system-ui}
+.waypoint-A,.waypoint-key b {color:white;background:#182d46}
+.waypoint-B,.waypoint-key span:last-child b {background:#f9ce74;color:#282317}
+.street-map .leaflet-bar {border:1px solid #c7cdd0;border-radius:9px;overflow:hidden}
+.street-map .leaflet-bar a {color:#26394e;width:32px;height:32px;line-height:32px}
+.waypoint-key {padding:9px 18px;gap:20px;background:#fafaf8;color:#465466;font-size:12px;border-bottom:1px solid #e1e1db}
+.waypoint-key span {gap:6px}.waypoint-key b {border-radius:50%;width:18px;height:18px;display:grid;place-items:center;font-size:10px}
+.journey-readout {padding:17px 18px 12px}
+.journey-readout dl {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;gap:8px}
+.journey-readout dl div + div {border-left:1px solid #dedfdc;padding-left:12px}
+.journey-readout dt {color:#556073;font-size:12px;gap:5px}
+.journey-readout dt svg {height:14px;width:14px;flex:none}
+.journey-readout dd {margin:4px 0 0;color:#17273b;font-weight:650;font-size:clamp(17px,1.65vw,28px);line-height:1.3;letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.journey-readout dd small {font-size:.68em}
+.journey-readout p {color:#637083;font-size:11px;gap:5px;margin:10px 0 0}
+.itinerary-map > p {font-size:13px;margin:10px 18px}
+@media(max-width:600px){
+  .street-map {height:clamp(245px,34svh,350px)}
+  .map-heading {padding:12px}.journey-readout {padding:12px}.journey-readout dl div + div {padding-left:8px}
+  .journey-readout dt {font-size:11px}.journey-readout dt svg {display:none}
+}

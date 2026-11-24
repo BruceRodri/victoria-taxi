@@ -1,0 +1,394 @@
+.dispatch-app {
+  min-height: 100vh;
+  background: #f7f5f3;
+  color: #211b1c;
+}
+.dispatch-app header {
+  background: #191516;
+  color: white;
+}
+.dispatch-app header .brand,
+.dispatch-app header .language {
+  color: white;
+}
+.dispatch-app header .language {
+  background: #312a2b;
+}
+.dispatch-main {
+  max-width: 1240px;
+  margin: auto;
+  padding: 30px clamp(16px, 4vw, 60px) 72px;
+}
+.dispatch-top,
+.shift-desk,
+.record-head,
+.ride-estimate,
+.city-line,
+.dispatch-state,
+.call-controls,
+.dispatch-tabs,
+.access-cover span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dispatch-top {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dispatch-top h1,
+.access-cover h1 {
+  letter-spacing: -0.055em;
+  margin: 5px 0;
+}
+.city-line,
+.dispatch-state {
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: #953041;
+}
+.dispatch-tabs {
+  flex-wrap: wrap;
+  margin: 0 0 20px;
+  gap: 6px;
+}
+.dispatch-tabs button,
+.text-action,
+.stars button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: #473a3d;
+}
+.dispatch-tabs button {
+  border-radius: 100px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 650;
+}
+.dispatch-tabs .selected {
+  background: #241c1e;
+  color: #fff;
+}
+.dispatch-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(290px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.dispatch-app .panel,
+.dispatch-app .itinerary-map,
+.dispatch-empty,
+.shift-desk,
+.access-card {
+  background: #fff;
+  border: 1px solid #e6dfdc;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px #41242a09;
+}
+.dispatch-app .panel {
+  padding: clamp(18px, 3vw, 30px);
+}
+.dispatch-app .primary {
+  background: #b61d37;
+  color: white;
+  border-radius: 12px;
+}
+.dispatch-app .outline {
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.booking-sheet > * + * {
+  margin-top: 14px;
+}
+.sheet-icon,
+.preview-profiles i {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 13px;
+  padding: 10px;
+  background: #fae9ec;
+  color: #a41930;
+}
+.booking-sheet h2,
+.dispatch-empty h2 {
+  letter-spacing: -0.04em;
+}
+.dispatch-stops {
+  list-style: none;
+  padding: 0;
+}
+.dispatch-stops li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+  padding: 0 0 20px;
+}
+.dispatch-stops li:last-child {
+  padding-bottom: 0;
+}
+.dispatch-stops i {
+  width: 12px;
+  height: 12px;
+  border: 3px solid #35282b;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+.dispatch-stops li:last-child i {
+  border-radius: 3px;
+  background: #bd213d;
+  border-color: #bd213d;
+}
+.dispatch-stops li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 0;
+  left: 5px;
+  border-left: 2px dotted #c6b9bb;
+}
+.dispatch-stops small,
+.record-head small,
+.preview-profiles small,
+.shift-desk small {
+  display: block;
+  color: #73666a;
+  font-size: 0.84rem;
+}
+.ride-estimate {
+  background: #f6f2f1;
+  padding: 14px;
+  border-radius: 12px;
+}
+.ride-estimate b,
+.preview-profiles button > svg {
+  margin-left: auto;
+}
+.trip-progress {
+  display: flex;
+  gap: 4px;
+}
+.trip-progress i {
+  flex: 1;
+  border-radius: 4px;
+  height: 5px;
+  background: #ede6e7;
+}
+.trip-progress .done {
+  background: #b61d37;
+}
+.shift-desk,
+.dispatch-empty {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+.shift-desk {
+  flex-wrap: wrap;
+}
+.shift-desk > div {
+  flex: 1;
+}
+.dispatch-empty {
+  text-align: center;
+  padding: 48px 24px;
+}
+.dispatch-empty > svg {
+  color: #b61d37;
+}
+.dispatch-alert {
+  background: #fff0e4;
+  padding: 12px;
+  border-radius: 10px;
+}
+.dispatch-access {
+  max-width: 1080px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20px;
+  gap: 26px;
+}
+.access-cover {
+  align-self: start;
+  height: 420px;
+  min-height: 420px;
+  border-radius: 24px;
+  padding: 32px;
+  background:
+    linear-gradient(0deg, #180d10eb, transparent 95%),
+    url(/victoria-newark.webp) center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: white;
+}
+.access-cover h1 {
+  color: #fff;
+  font-size: clamp(58px, 8vw, 108px);
+  line-height: 0.96;
+}
+.access-cover em {
+  color: #ff738a;
+  font-style: normal;
+}
+.access-card {
+  padding: 26px;
+}
+.preview-profiles {
+  border-top: 1px solid #e6dfdc;
+  margin-top: 20px;
+  padding-top: 16px;
+}
+.preview-profiles h2 {
+  font-size: 1.05rem;
+}
+.preview-profiles button,
+.record-head {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #eee6e7;
+  padding: 12px 0;
+  cursor: pointer;
+  color: inherit;
+}
+.record-head span {
+  flex: 1;
+}
+.record-body {
+  padding: 16px 0;
+}
+.history-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.history-filters label {
+  flex: 1;
+  min-width: 140px;
+}
+.dispatch-app select,
+.dispatch-app textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d6cdcf;
+  border-radius: 9px;
+  background: white;
+  color: #211b1c;
+}
+.dispatch-app textarea {
+  min-height: 76px;
+}
+.stars {
+  display: flex;
+  color: #ae1b35;
+}
+.stars button {
+  color: inherit;
+  padding: 7px;
+}
+.dispatch-app summary,
+.text-action {
+  cursor: pointer;
+}
+.text-action {
+  padding: 8px;
+  text-decoration: underline;
+}
+.call-controls {
+  flex-wrap: wrap;
+}
+.dispatch-app .chat-details {
+  border-block: 1px solid #e6dfdc;
+  padding: 14px 0;
+}
+.dispatch-app .chat-details p {
+  overflow-wrap: anywhere;
+}
+.dispatch-app .street-map {
+  min-height: 300px;
+}
+@media (max-width: 760px) {
+  .dispatch-grid,
+  .dispatch-access {
+    grid-template-columns: 1fr;
+  }
+  .dispatch-access {
+    margin: 16px auto;
+    gap: 14px;
+  }
+  .access-cover {
+    height: 180px;
+    min-height: 180px;
+    padding: 20px;
+  }
+  .access-cover h1 br {
+    display: none;
+  }
+  .access-cover h1 {
+    font-size: 54px;
+  }
+  .dispatch-main {
+    padding: 16px 12px 50px;
+  }
+  .dispatch-grid {
+    gap: 12px;
+  }
+  .dispatch-app .map-stage,
+  .dispatch-app .street-map {
+    height: 250px;
+    min-height: 250px;
+  }
+  .dispatch-top h1 {
+    font-size: 1.85rem;
+  }
+  .dispatch-tabs button {
+    padding: 9px 12px;
+  }
+  .dispatch-app .record-head {
+    flex-wrap: wrap;
+  }
+  .dispatch-app .history-filters {
+    gap: 6px;
+  }
+  .dispatch-app .driver-drawer {
+    width: min(100%, 480px);
+  }
+}
+.register-intro h2,.access-form h2{font-size:1.6rem;letter-spacing:-.04em;margin:16px 0 6px}
+.register-intro p,.access-form p,.registration-section p{color:#74676a;font-size:.9rem;margin:0 0 18px}
+.register-roles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 24px}
+.register-roles button{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid #e5dcdc;border-radius:14px;padding:15px 12px;background:#fff;color:#534347;cursor:pointer}
+.register-roles button[aria-pressed=true]{border-color:#b61d37;background:#fff4f5;color:#a41830;box-shadow:0 0 0 1px #b61d37}
+.register-roles small{display:block;font-size:.76rem;font-weight:400;color:#766b6e;margin-top:4px}
+.access-card .driver-registration{border:0;box-shadow:none;padding:0;background:transparent}
+.registration-section{padding:18px 0;border-top:1px solid #eee6e7}
+.registration-section h3{font-size:1.04rem;margin:0 0 14px}
+.registration-section small{color:#74676a}
+.registration-grid,.registration-docs{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
+.registration-docs label{border:1px solid #e8dfe0;border-radius:12px;padding:12px;min-width:0;font-size:.85rem}
+.registration-docs input{font-size:.78rem;width:100%;padding:8px 0}
+.review-note{background:#fff4f5;border-radius:12px;padding:13px;color:#803041;font-size:.87rem}
+@media(max-width:420px){.registration-grid,.registration-docs{grid-template-columns:1fr}.register-roles button{align-items:flex-start}.register-roles{gap:7px}}
+.ride-call-screen{position:fixed;inset:0;z-index:5000;background:#22181d;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}.ride-call-screen h2,.ride-call-screen p{margin:0;color:white}.ride-call-screen button{padding:14px 18px;border:0;border-radius:20px;font-weight:650;display:inline-flex;align-items:center;justify-content:center;gap:8px}.route-choices{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}.route-choices button[aria-pressed=true]{outline:3px solid #ef7384}.ride-call-screen .end-call{background:#bc233e;color:white}.ride-call-screen .answer-call{background:#216b49;color:white}.locate-me{display:inline-flex;align-items:center;gap:8px;border-radius:12px;background:white;color:#672536;border:1px solid #dfd5d7;padding:10px 14px;margin:4px 12px 8px}
+.trip-call-button,.booking-sheet .chat-details summary{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;font-weight:650;border-radius:14px;padding:13px;border:1px solid #dfcdd1}.trip-call-button{background:#38252a;color:white;cursor:pointer}.booking-sheet .chat-details{padding:0;border:0}.booking-sheet .chat-details summary{background:#fff4f5;color:#842139}.caller-avatar{position:relative;width:106px;height:106px;border-radius:50%;background:#503239;display:grid;place-items:center;margin-bottom:12px;box-shadow:0 0 0 10px #37242a}.caller-avatar span{position:absolute;right:0;bottom:0;padding:7px;background:#b82141;border-radius:50%;display:grid;place-items:center}.ride-call-screen{background:radial-gradient(ellipse at top,#512933,#191419 70%)}.ride-call-screen .route-choices button{flex-direction:column;min-width:82px;background:#3c3036;color:white}.ride-call-screen .route-choices{margin:18px 0}
+
+.vt-meeting-field { display:grid; gap:.35rem; text-align:left; font-size:.84rem; }
+.vt-meeting-field input { width:100%; min-width:0; box-sizing:border-box; padding:.7rem; border:1px solid #a6a2a2; border-radius:.65rem; background:white; color:#211e20; }
+.vt-meeting-card,.vt-arrival-card { padding:.9rem 1rem; border:1px solid #e3d8da; border-radius:1rem; background:#fff8f8; color:#251d20; }
+.vt-meeting-card { display:flex; align-items:flex-start; gap:.65rem; overflow-wrap:anywhere; }
+.vt-meeting-card svg { flex:none; color:#ae1830; }
+.vt-meeting-card small,.vt-meeting-card strong { display:block; }
+.vt-meeting-card p,.vt-arrival-card p { margin:.35rem 0 0; color:#503e43; }
+.vt-arrival-card > div { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.65rem; }
+.vt-arrival-card button[aria-pressed=true] { background:#792036; color:white; opacity:1; }

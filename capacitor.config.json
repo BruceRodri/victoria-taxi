@@ -1,0 +1,6 @@
+{
+  "appId": "com.victoriataxi.mobile",
+  "appName": "Victoria-Taxi",
+  "webDir": "dist",
+  "android": { "useLegacyBridge": true }
+}

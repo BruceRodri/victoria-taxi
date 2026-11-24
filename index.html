@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142440">
+  <title>Victoria-Taxi</title>
+</head>
+<body>
+  <div id="root">
+    <main style="padding:32px;font:18px system-ui;color:#241c1e">
+      <h1>Victoria-Taxi</h1>
+      <p id="boot-status" role="status">Abriendo tu cuenta…</p>
+      <button hidden id="boot-retry" onclick="location.reload()">Volver a intentar</button>
+    </main>
+  </div>
+  <script>
+    function showBootFailure() {
+      var status = document.getElementById("boot-status");
+      if (status) {
+        status.textContent = "No se pudo cargar la aplicación. Tu sesión sigue guardada.";
+        document.getElementById("boot-retry").hidden = false;
+      }
+    }
+    window.addEventListener("error", showBootFailure, true);
+    setTimeout(showBootFailure, 12000);
+  </script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
